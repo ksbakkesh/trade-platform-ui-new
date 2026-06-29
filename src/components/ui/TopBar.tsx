@@ -1,6 +1,7 @@
 'use client'
 import { useEffect, useState } from 'react'
-import { Bell, Settings, RefreshCw, User, Menu } from 'lucide-react'
+import { Settings, RefreshCw, User, Menu } from 'lucide-react'
+import NotificationBell from './NotificationBell'
 
 interface Quote { ltp: number | null; change?: number; changePct?: number }
 
@@ -107,9 +108,7 @@ export default function TopBar({ onMenuClick }: { onMenuClick?: () => void }) {
           </span>
         </div>
 
-        <button className="p-1.5 rounded-lg text-muted hover:text-data hover:bg-surface-2 transition-colors">
-          <Bell size={14} />
-        </button>
+        <NotificationBell />
         <button className="p-1.5 rounded-lg text-muted hover:text-data hover:bg-surface-2 transition-colors hidden sm:flex">
           <Settings size={14} />
         </button>
